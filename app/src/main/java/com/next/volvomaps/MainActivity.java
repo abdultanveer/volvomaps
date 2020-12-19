@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
 
+
     /**
      * Provides the entry point to the Fused Location Provider API.
      */
@@ -48,11 +49,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        /*String[] langauges = new String[]{"english","hindi"};
+        Student[] students = new Student[]{};
+        students[0] = new Student("abdul",123);*/
         mLatitudeLabel = getResources().getString(R.string.latitude_label);
         mLongitudeLabel = getResources().getString(R.string.longitude_label);
         mLatitudeText = (TextView) findViewById((R.id.latitude_text));
         mLongitudeText = (TextView) findViewById((R.id.longitude_text));
+
+       /* Intent mIntent = new Intent(MainActivity.this,MapsActivity.class);
+        mIntent.putExtra("studs",students);*/
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);  //connecting to my google play
     }
